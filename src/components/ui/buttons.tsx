@@ -8,7 +8,7 @@ interface MatarialButton {
 }
 
 export const MatarialButton: React.FC<MatarialButton> = ({
-  to = "/auth",
+  to = "/signup",
   className = "",
   children = "Get Started",
 }) => {
