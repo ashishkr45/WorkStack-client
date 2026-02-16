@@ -1,22 +1,39 @@
-import './App.css'
-import {Routes, Route} from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
+import { Toaster } from 'react-hot-toast'
+
 import SignupPage from './pages/signupPage'
-import LoginPage from './pages/loginPage'
+import LoginPages from './pages/loginPage'
 import Dashboard from './pages/dashboard'
 import Landing from './pages/landingPage'
 import NotFound from './pages/notFound'
+import ProtectedRoute from "./components/layout/ProtectedRoute"
+
+import './App.css'
 
 function App() {
 
   return (
-    <Routes>
-      <Route path='/' element={<Landing />} />
-      <Route path='/login' element={<LoginPage />} />
-      <Route path='/signup' element={<SignupPage />} />
-      <Route path='/dashboard' element={<Dashboard />} />
-      <Route path='*' element={<NotFound />} />
+    <>
+      <Toaster position='bottom-right' reverseOrder={false} />
+      <Routes>
+        {/* Public Routes */}
+        <Route path='/' element={<Landing />} />
+        <Route path='/login' element={<LoginPages />} />
+        <Route path='/signup' element={<SignupPage />} />
 
-    </Routes>
+        {/* Protected Route */}
+        <Route 
+          path='/dashboard' 
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          } />
+
+        {/* Catch-all Route */}
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+    </>
   )
 }
 
