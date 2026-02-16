@@ -13,7 +13,7 @@ const LoginPage = () => {
 					/>
 				</div>
 
-				<div className="p-10 flex items-center">
+				<div className="p-10 ">
 					<LoginForm />
 				</div>
 			</div>

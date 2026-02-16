@@ -13,7 +13,7 @@ const SignupPage = () => {
 					/>
 				</div>
 
-				<div className="p-10 flex items-center">
+				<div className="p-10">
 					<SignupForm />
 				</div>
 			</div>
