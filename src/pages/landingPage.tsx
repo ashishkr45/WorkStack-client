@@ -1,6 +1,6 @@
 import Navbar from "../components/layout/navbar"
-import HeroSection from "../components/landing/hero"
-import FeatureSection from "../components/landing/feature"
+import HeroSection from "../features/landing/components/hero"
+import FeatureSection from "../features/landing/components/feature"
 import Footer from "../components/layout/footer"
 
 export default function LandingPage() {
