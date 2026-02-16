@@ -93,7 +93,7 @@ const LoginForm: React.FC = () => {
 			<button
 				type="submit"
 				disabled={isLoading}
-				className="w-full bg-black text-white py-2.5 rounded-lg hover:opacity-90 transition font-medium disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center"
+				className="cursor-pointer w-full bg-black text-white py-2.5 rounded-lg hover:opacity-90 transition font-medium disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center"
 			>
 				{isLoading ? (
 				<>
